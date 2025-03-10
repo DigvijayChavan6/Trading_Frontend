@@ -153,7 +153,7 @@ const StockChart = () => {
             <ReactApexChart
                 options={options}
                 series={series}
-                height={450}
+                height={350}
                 type="area"
             />
         </div>

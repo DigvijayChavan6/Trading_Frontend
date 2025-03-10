@@ -21,7 +21,7 @@ const WithdrawalForm = () => {
         <p>$906825</p>
       </div>
 
-      <div className="flex flex-col itmes-center">
+      <div className="flex flex-col items-center">
         <h1>Enter Withdrawal amount</h1>
         <div className="flex items-center justify-center">
           <Input

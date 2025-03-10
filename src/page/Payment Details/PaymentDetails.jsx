@@ -25,7 +25,7 @@ const PaymentDetails = () => {
               <p className="w-32">A/C Holder</p>
               <p className="text-orange-400"> : Jay Tred</p>
             </div>
-            <div className="flex itmes-center">
+            <div className="flex items-center">
               <p className="w-32">IFSC</p>
               <p className="text-orange-400">: YESB0000007</p>
             </div>

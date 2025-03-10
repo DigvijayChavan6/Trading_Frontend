@@ -13,7 +13,7 @@ import StockChart from "../Home/StockChart";
 
 const StockDetails = () => {
   return (
-    <div className="p-5 mt-5">
+    <div className="p-5 mt-3">
       <div className="flex justify-between">
         <div className="flex gap-5 items-center">
           <div>
@@ -61,7 +61,7 @@ const StockDetails = () => {
           </Dialog>
         </div>
       </div>
-      <div className="mt-14"> 
+      <div className="mt-7"> 
         <StockChart/>
       </div>
     </div>

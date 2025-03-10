@@ -73,7 +73,7 @@ const Home = () => {
         <div className="hidden lg:block lg:w-[50%] p-5">
           <StockChart />
 
-          <div className="flex gap-5 itmes-center">
+          <div className="flex gap-5 items-center">
             <div>
               <Avatar>
                 <AvatarImage src="https://coin-images.coingecko.com/coins/images/1/large/bitcoin.png?1696501400" />
@@ -99,10 +99,10 @@ const Home = () => {
         </div>
       </div>
 
-      <section className="absolute bottom-5 right-5 z-40 flex flex-col justify-end items-end gap-2">
+      <section className="fixed bottom-2 right-5 z-40 flex flex-col justify-end items-end gap-2">
         {isBotRealease && (
           <div className="rounded-md w-[20rem] md:w-[25rem] lg:w-[22rem] h-[72vh] bg-orange-950">
-            <div className="flex justify-between itmes-center border-b px-6 h-[12%]">
+            <div className="flex justify-between items-center border-b px-6 h-[12%]">
               <p>Chat Bot</p>
               <Button onClick={handleBotRealease} variant="ghost" size="icon">
                 <Cross1Icon />

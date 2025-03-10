@@ -41,7 +41,7 @@ const TopUpForm = () => {
           className="flex"
           defaultValue="RAZORPAY"
         >
-          <div className="flex itmes-center space-x-2 border p-3 px-5 rounded-md">
+          <div className="flex items-center space-x-2 border p-3 px-5 rounded-md">
             <RadioGroupItem
               icon={DotFilledIcon}
               className="h-9 w-9"
@@ -59,7 +59,7 @@ const TopUpForm = () => {
             </Label>
           </div>
 
-          <div className="flex itmes-center space-x-2 border p-3 px-5 rounded-md">
+          <div className="flex items-center space-x-2 border p-3 px-5 rounded-md">
             <RadioGroupItem
               icon={DotFilledIcon}
               className="h-9 w-9"

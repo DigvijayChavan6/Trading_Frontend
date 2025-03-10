@@ -14,7 +14,7 @@ const Wallet = () => {
         <Card>
           <CardHeader className="pb-9">
             <div className="flex justify-between items-center">
-              <div className="flex itmes-center gap-5">
+              <div className="flex items-center gap-5">
                 <WalletIcon size={30} />
                 <div>
                   <CardTitle className="text-2xl">My Wallet</CardTitle>
@@ -33,7 +33,7 @@ const Wallet = () => {
             </div>
           </CardHeader>
           <CardContent>
-            <div className="flex itmes-center">
+            <div className="flex items-center">
               <DollarSign />
               <span className="text-2xl font-semibold">20000</span>
             </div>
