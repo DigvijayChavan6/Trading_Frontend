@@ -9,7 +9,6 @@ import {
   PersonIcon,
 } from "@radix-ui/react-icons";
 import { CreditCardIcon, LandmarkIcon, WalletIcon } from "lucide-react";
-import React from "react";
 import { useNavigate } from "react-router-dom";
 
 const menu = [
