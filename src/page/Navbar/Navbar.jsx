@@ -17,13 +17,7 @@ const Navbar = () => {
       <div className="flex items-center gap-3">
         <Sheet>
           <SheetTrigger>
-            <Button
-              variant="ghost"
-              size="icon"
-              className="rounded-full h-11 w-11"
-            >
-              <DragHandleHorizontalIcon className="h-7 w-7" />
-            </Button>
+            <DragHandleHorizontalIcon className="h-7 w-7" />
           </SheetTrigger>
           <SheetContent
             className="w-72 border-r-0 flex flex-col justify-center"
@@ -33,12 +27,11 @@ const Navbar = () => {
               <SheetTitle>
                 <div className="text-3xl flex justify-center items-center gap-1">
                   <Avatar>
-                    <AvatarImage src="src/assets/dr.webp" />
+                    <AvatarImage src="/src/assets/y.webp" />
                   </Avatar>
 
                   <div>
-                    <span className="font-bold text-orange-600">J </span>
-                    <span>Trad</span>
+                    <span className="font-bold text-orange-600">YUKTI</span>
                   </div>
                 </div>
               </SheetTitle>
@@ -48,7 +41,12 @@ const Navbar = () => {
           </SheetContent>
         </Sheet>
 
-        <p className="text-sm lg:text-base cursor-pointer">J Trading</p>
+        <div className="flex items-center space-x-1">
+          <Avatar>
+            <AvatarImage src="/src/assets/y.webp" />
+          </Avatar>
+          <p className="cursor-pointer text-orange-600 font-bold">YUKTI</p>
+        </div>
 
         <div className="p-0 ml-9">
           <Button variant="outline" className="flex items-center gap-3">
@@ -60,9 +58,7 @@ const Navbar = () => {
 
       <div>
         <Avatar>
-          <AvatarFallback>
-            DJ
-          </AvatarFallback>
+          <AvatarFallback>DJ</AvatarFallback>
         </Avatar>
       </div>
     </div>
