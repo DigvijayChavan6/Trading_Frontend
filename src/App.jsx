@@ -21,7 +21,6 @@ import { getUser } from "./state/Auth/Action";
 function App() {
 
   const { auth } = useSelector((store) => store);
-  console.log(auth);
   const dispatch = useDispatch();
 
   useEffect(() => {

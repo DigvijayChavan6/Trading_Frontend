@@ -29,13 +29,15 @@ export const login = (userData) => async (dispatch) => {
   const baseUrl = "http://localhost:5454";
 
   try {
-    const response = await axios.post(`${baseUrl}/auth/signing`, userData);
+    const response = await axios.post(`${baseUrl}/auth/signing`, userData.data);
     const user = response.data;
     console.log(user);
 
     dispatch({ type: LOGIN_SUCCESS, payload: user.jwt });
 
     localStorage.setItem("jwt", user.jwt);
+    
+    userData.navigate("/");
   } catch (error) {
     console.log(error);
     dispatch({ type: LOGIN_FAILURE, payload: error.message });

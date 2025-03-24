@@ -78,7 +78,12 @@ const Sidebar = () => {
             <Button
               variant="outline"
               className="flex items-center gap-5 py-6 w-full"
-              onClick={() => navigate(item.path)}
+              onClick={() => {
+                navigate(item.path)
+                if(item.name=="Logout"){
+                  handleLogout()
+                }
+              }}
             >
               <span className="w-8">{item.icon}</span>
               <p>{item.name}</p>
