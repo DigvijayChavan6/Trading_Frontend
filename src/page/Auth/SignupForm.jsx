@@ -1,5 +1,4 @@
 import { Button } from "@/components/ui/button";
-import { DialogClose } from "@/components/ui/dialog";
 import {
   Form,
   FormControl,
@@ -9,25 +8,32 @@ import {
   FormMessage,
 } from "@/components/ui/form";
 import { Input } from "@/components/ui/input";
+import { register } from "@/state/Auth/Action";
 import { useForm } from "react-hook-form";
+import { useDispatch } from "react-redux";
 
 const SignupForm = () => {
+  const dispatch = useDispatch();
   const form = useForm({
     resolver: "",
     defaultValues: {
       fullName: "",
       email: "",
       password: "",
+      confirmPassword: "",
     },
   });
 
   const onSubmit = (data) => {
+    dispatch(register(data));
     console.log(data);
   };
 
   return (
     <div>
-      <h1 className="text-center text-xl font-bold text-orange-400">Create your Account</h1>
+      <h1 className="text-center text-xl font-bold text-orange-400">
+        Create your Account
+      </h1>
       <Form {...form}>
         <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-3">
           <FormField

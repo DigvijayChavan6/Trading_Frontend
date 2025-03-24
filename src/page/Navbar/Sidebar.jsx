@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { SheetClose } from "@/components/ui/sheet";
+import { logout } from "@/state/Auth/Action";
 import {
   ActivityLogIcon,
   BookmarkIcon,
@@ -9,6 +10,7 @@ import {
   PersonIcon,
 } from "@radix-ui/react-icons";
 import { CreditCardIcon, LandmarkIcon, WalletIcon } from "lucide-react";
+import { useDispatch } from "react-redux";
 import { useNavigate } from "react-router-dom";
 
 const menu = [
@@ -62,6 +64,11 @@ const menu = [
 const Sidebar = () => {
 
   const navigate = useNavigate();
+  const dispatch = useDispatch();
+
+  const handleLogout = () => {
+    dispatch(logout());
+  };
 
   return (
     <div className="mt-3 space-y-1">
