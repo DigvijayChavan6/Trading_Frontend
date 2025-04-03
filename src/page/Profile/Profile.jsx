@@ -10,8 +10,12 @@ import {
 } from "@/components/ui/dialog";
 import { VerifiedIcon } from "lucide-react";
 import AccountVerificationForm from "./AccountVerificationForm";
+import { useSelector } from "react-redux";
 
 const Profile = () => {
+
+  const {auth} = useSelector(store => store);
+
   const handleEnableTwoStepVerification = () => {
     console.log("Two step verification");
   };
@@ -27,20 +31,20 @@ const Profile = () => {
             <div className="lg:flex gap-32">
               <div className="space-y-7">
                 <div className="flex">
-                  <p className="w-[9rem]">Email : </p>
-                  <p className="text-orange-500">abc@gmail.com</p>
+                  <p className="w-[9rem]">Full Name : </p>
+                  <p className="text-orange-500">{auth.user?.fullName}</p>
                 </div>
                 <div className="flex">
-                  <p className="w-[9rem]">Full Name : </p>
-                  <p className="text-orange-500">Abc Khin</p>
+                  <p className="w-[9rem]">Email : </p>
+                  <p className="text-orange-500">{auth.user?.email}</p>
                 </div>
                 <div className="flex">
                   <p className="w-[9rem]">Date of Birth : </p>
-                  <p className="text-orange-500">23/01/2003</p>
+                  <p className="text-orange-500">{auth.user?.dob}</p>
                 </div>
                 <div className="flex">
                   <p className="w-[9rem]">Nationality : </p>
-                  <p className="text-orange-500">Bharatian</p>
+                  <p className="text-orange-500">{auth.user?.nation}</p>
                 </div>
               </div>
               <div className="space-y-7">
