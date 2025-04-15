@@ -6,8 +6,22 @@ import TopUpForm from "./TopUpForm";
 import WithdrawalForm from "./WithdrawalForm";
 import TransferForm from "./TransferForm";
 import { Avatar, AvatarFallback } from "@/components/ui/avatar";
+import { useDispatch } from "react-redux";
+import { useEffect } from "react";
+import { getUserWallet } from "@/state/Wallet/Action";
 
 const Wallet = () => {
+
+  const dispatch = useDispatch();
+
+  useEffect(() => {
+    handleFetchUserWallet();
+  }, []);
+
+  const handleFetchUserWallet = () => {
+    dispatch(getUserWallet(localStorage.getItem("jwt")));
+  }
+
   return (
     <div className="flex flex-col items-center">
       <div className="pt-10 w-full lg:w-[60%]">
